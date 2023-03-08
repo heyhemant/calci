@@ -1,8 +1,14 @@
-// TODO: Put public facing types in this file.
+import 'package:js/js.dart';
+class  Calculations {
+  @JS('add')
+external set _add(int Function(int, int) f);
 
-/// Checks if you are awesome. Spoiler: you are.
-class Calculations {
-  
-  int add(int a, int b) => a+b;
+@JS()
+external int add(int a, int b);
 
+int addition(int a, int b) => a+b;
+
+Calculations(){
+  _add = allowInterop(addition);
+}
 }
