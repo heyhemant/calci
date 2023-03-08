@@ -2,9 +2,7 @@
 
 /// Checks if you are awesome. Spoiler: you are.
 class Calculations {
-  int a, b;
+  
+  int add(int a, int b) => a+b;
 
-  int add() => a+b;
-
-  Calculations(this.a, this.b);
 }
